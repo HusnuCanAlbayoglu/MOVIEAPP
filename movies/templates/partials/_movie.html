@@ -1,0 +1,9 @@
+{% load static %}
+
+<div class="card">
+    <img src="{% static 'img/'|add:f.resim  %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{f.film_adi}}</h5>
+      <p class="card-text">{{f.aciklama}}</p>
+      <a href="{% url 'detail' id=f.id %}" class="btn btn-danger">Details</a>
+    </div>
